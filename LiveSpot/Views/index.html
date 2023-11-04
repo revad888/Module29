@@ -1,0 +1,57 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>LifeSpot</title>
+    <link href="Static/CSS/index.css" rel="stylesheet" type="text/css" />
+    <script src="../Static/JS/index.js"></script>
+    <script>
+        //handleSession();
+        //checkAge();
+        //sessionLog();
+        setTimeout(()=>
+        alert("Нравится сайт?\nПодпишитесь на наш запрещенограм"), 10000)
+    </script>
+    
+    <style>
+        /* Свойства стиля элемента. Подробнее о них - в модуле по CSS */
+        .block {
+            border: 2px solid black;
+            background-color: azure;
+            padding: 10px;
+        }
+    </style>
+
+</head>
+<!--SIDEBAR-->
+<body>
+
+    <header id="header-index">
+        <div class="bordered">
+            <h1>LifeSpot — прямые трансляции с улиц</h1>
+            <p>Покажем, что происходит прямо сейчас</p>
+        </div>
+
+    </header>
+    <p class="search">
+        <input type="text" oninput="
+        userFilter(document.getElementsByTagName('input')[0].value.toLowerCase())">
+    </p>
+    <div class="video-container">
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/wCcMcaiRbhM?si=nN_epiq7tlZsMwKj" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+        <h3 class="video-title">Трансляция Санкт-Петербург</h3>
+
+    </div>
+    <div class="video-container">
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/srlpC5tmhYs?si=QRWTySEL_sRyww3u" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+        <h3 class="video-title">Трансляция Нью-Йорк</h3>
+
+    </div>
+    <div class="video-container">
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/JplMzss6_YE?si=VKL_CDcMP8bhyLhQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+        <h3 class="video-title">Трансляция Лондон</h3>
+
+    </div>
+</body>
+<!--FOOTER-->
+</html>
