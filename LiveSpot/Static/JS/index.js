@@ -11,17 +11,26 @@ let sessionLog = function logSession(){
 
 function handleSession(){
     
-    let agent = window.navigator.userAgent
-    let age = prompt("Пожалуйста, введите ваш возраст");
-    session.set('agent', agent);
-    session.set('age', age);
-    session.set('date', new Date().toLocaleString());
+    if(window.sessionStorage.getItem('date') == null){
+        window.sessionStorage.setItem('date', new Date().toLocaleString())
+    }
+    if(window.sessionStorage.getItem('userAgent')==null){
+        const age = checkAge();
+        if(age != null){
+            window.sessionStorage.setItem('userAgent', window.navigator.userAgent)
+            window.sessionStorage.setItem('userAge', age)
+        }
+        
+    }
+    
     
 }
 function checkAge(){
-    if(session.get("age") >= 18){
+    let age = prompt("Пожалуйста, введите ваш возраст")
+    if(age >= 18){
         // Те, кто старше 18, увидят приветствие и будут направлены на сайт
         alert("Приветствуем на LifeSpot! " + new Date().toLocaleString());
+        return age
     }
     else{
         // Выполним проверку. Если введенное число < 18, либо если введено не число -
